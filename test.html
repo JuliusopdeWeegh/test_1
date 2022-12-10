@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkit(){
+            console.log("CHECK IT");
+            var leeftijd = document.getElementById("leeftijdinvoerveld").value;
+            var antv = document.getElementById("antwoord");
+        
+            console.log(antv);
+            if ( leeftijd < 18 ){
+                console.log("jij mag geen alcohol")
+                tekenOpScherm(antv, "je mag geen alcohol", 'coral');
+//                antv.innerHTML = "Jij mag geen alcohol"
+ //               antv.style.backgroundColor = 'red';
+            }else{
+                console.log("jij mag wel alcohol")
+                tekenOpScherm(antv, "je mag wel alcohol", 'lightgreen');
+   //             antv.innerHTML = "Jij mag alcohol"
+     //           antv.style.backgroundColor = 'green';
+            }
+        }
+        function tekenOpScherm(elem, tekst, kleur){
+            elem.innerHTML = tekst;
+            elem.style.backgroundColor = kleur;
+        }
+
+
+        /*
+            - WAT  |  functionele doelstelling (CONCREET   -   OPKNIPPEN??)
+                    de kleur wordt rood als 17 invul
+            - HOE  |  technische strategy
+            - Tweede zin
+            - CODEREN -- achter
+        */
+    </script>
+
+
+</head>
+<body>
+    <input id="leeftijdinvoerveld"><button onclick="checkit()"> Check Alcohol  </button>
+    <div id="antwoord">hoi</div>
+
+</body>
+</html>
